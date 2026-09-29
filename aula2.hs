@@ -78,3 +78,7 @@ perfects n = [x | x <- [1..n], sum (propDivs x) == x ]
 --Codex 2.11
 isPrime :: Integer -> Bool
 isPrime n = length [ x | x<- [1..n], mod n x == 0] == 2
+
+--2.10
+pyths :: Integer -> [(Integer,Integer,Integer)]
+pyths n = [(x,y,z) | x <- [1..n], y <- [1..n], z <- [1..n], x*x+y*y==z*z]
