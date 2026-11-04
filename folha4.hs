@@ -1,4 +1,4 @@
--- CODEX Worksheet 4
+--Worksheet 4
 
 -- 4.1
 
@@ -64,12 +64,17 @@ fizzBuzz n
   | n `mod` 3==0 =  "Fizz"
   | otherwise = show n
 
-fizzBuzzList :: Int -> [String]
-fizzBuzzList n = map fizzBuzz [1..n]
-
 fizz :: IO ()
 fizz = do
-  putStrLn "Write a number:"
   input <- getLine
   let num = (read input) :: Int
-  mapM_ putStrLn (fizzBuzzList num)
+  fizzRec 1 num
+
+fizzRec :: Int -> Int -> IO ()
+fizzRec n1 n2
+  | n1 >= n2 = putStrLn $ fizzBuzz n1
+  | otherwise = do
+    putStrLn $ fizzBuzz n1
+    fizzRec (n1 + 1) n2
+
+
