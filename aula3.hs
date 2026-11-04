@@ -57,3 +57,8 @@ divisors n = filter (\x -> mod n x == 0) [1..n]
 isPrimeFast :: Integer -> Bool 
 isPrimeFast 1 = False
 isPrimeFast n = all (\x -> mod n x /= 0) [2..floor(sqrt (fromIntegral n))]
+
+--3.11 a)
+
+myappend :: [a] -> [a] -> [a]
+myappend (x1:xs1) (x2:xs2) = myFoldr (\acc -> \)
