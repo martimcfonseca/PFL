@@ -72,4 +72,4 @@ ap (x:xs) l = (x):(ap xs l)
 
 myrev :: [a] -> [a]
 myrev [] = []
-myrev (x:xs) = myrev xs ++ [x] 
+myrev (x:xs) = myrev xs ++ [x]
