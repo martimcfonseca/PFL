@@ -3,7 +3,6 @@ PFL - Sheet TP6 - Beginning of exercise 1
 By: Gonçalo Leão
 */
 
-%%% a
 male(frank).
 male(jay).
 male(javier).
